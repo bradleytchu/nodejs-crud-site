@@ -15,6 +15,17 @@ Last run 'git push -u origin master' to copy your files from your local machine 
 
 4. Once your files are on git, to get it to your server, first ssh or login into your server terminal using putty or git bash.
 5. Inside the terminal, make sure you create a user with sudo privileges so you don't have to change root files by accident.
-6. Once you are logged in as a user inside your home directory which is this ~ symbol, go to your git repo and click clone or download and copy the link provided
-Run '
+6. Once you are logged in as a sudo user inside your home directory which shows the ~ symbol, go to your git repo and click clone or download and copy the link provided
+7. Back in your server terminal, in your home directory:
+Run 'git clone https://github.com/your_username/your_repo_name.git' to copy your repo to your user's home directory
+Then run 'ls' to see if the git folder is there.
+Then change directory into it.
+8. Once inside your git folder directory
+run 'npm install' to install all the dependencies set by your package.json file. (Note: nodejs must be install for npm to work)
+run 'npm install nodemon' to initialize npm start and mongodb together
+9. At this point, go to your server ip at port 80 and you should see the site is live online on the internet.
+10. To keep the site running without stopping, node must run as a service background. To do this:
+run ' npm install pm2 -g' to globally add this service to your server
+run 'pm2 start app.js' and it will run the service in the background and the site will continuously run until you manually stop it
 
+To make changes to your 
