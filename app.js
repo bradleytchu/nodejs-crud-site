@@ -75,7 +75,7 @@ app.get('/', (req, res) => {
     }
 
     res.render('index', {
-      title: 'Welcome to NodeJS & Mongo CRUD site!',
+      title: 'Welcome to NodeJS & Mongo CRUD site! :)',
       articles: articles
     });
 
