@@ -29,14 +29,14 @@ Then change directory into it.
 run 'npm install' to install all the dependencies set by your package.json file. (Note: nodejs must be install for npm to work)
 run 'npm install nodemon' to initialize npm start and mongodb together
 
-9. At this point, go to your server ip at port 80 and you should see the site is live online on the internet.
+9. At this point, go to your server ip at port your_server_ip:80 and you should see the site is live online on the internet.
 
 10. To keep the site running without stopping, node must run as a service background. To do this:
 run ' npm install pm2 -g' to globally add this service to your server
 run 'pm2 start app.js' and it will run the service in the background and the site will continuously run until you manually stop it
 
 To make changes to your server files, this is the workflow you should do:
-Git pull files from your git repo => Make changes to those files on local machine => Test on local machine => Add to local git folder (using git add .) => Commit to local git folder (using git commit -m 'commit msg') => Push to git (git push) => Git stash on server (git stash) => Git pull from repo to your server git folder => Git stash apply to apply the git pull to your current folder (git stash apply). 
+Git pull files from your git repo => Make changes to those files on local machine => Test on local machine => Add to local git folder (using git add .) => Commit to local git folder (using git commit -m 'commit msg') => Push to git (git push) => Then on your server inside your site folder where .git folder resides, run git pull to get the latest files from git repo => restart pm2 service and refresh your site.
 
 
 
